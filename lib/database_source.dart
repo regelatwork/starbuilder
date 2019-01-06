@@ -1,9 +1,4 @@
-import 'dart:io';
-import 'dart:convert';
-
 import 'package:csv/csv.dart';
-import 'package:star_builder/primitives.dart';
-
 import 'package:flutter/services.dart' show rootBundle;
 
 class SourceDb {
@@ -27,7 +22,7 @@ class SourceDb {
 
   static List<SfSource> parseCell(String input) {
     if(input[0] == '[') {
-      input = input.substring(1, input.length-2);
+      input = input.substring(1, input.length-1);
       List<SfSource> sources = <SfSource>[];
       for(String source in input.split(',')) {
         sources.add(SourceDb.parse(source));
