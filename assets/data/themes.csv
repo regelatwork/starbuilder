@@ -12,10 +12,10 @@ Gladiator,Con,Intimidate,PW
 Icon,Cha,Culture,CRB
 Mercenary,Str,Athletics,CRB
 Outlaw,Dex,Sleight of Hand,CRB
-Paranormal Investigator,"[Int, Wis, Cha]","[Diplomacy, Life Science, Mysticism, Physical Science, Survival]",AP10
+Paranormal Investigator,"[Int,Wis,Cha]","[Diplomacy,Life Science,Mysticism,Physical Science,Survival]",AP10
 Priest,Wis,Mysticism,CRB
 Roboticist,Int,Computers,PW
-Scholar,Int,"[Life Science, Physical Science]",CRB
+Scholar,Int,"[Life Science,Physical Science]",CRB
 Solar Disciple,Wis,Perception,PW
 Space Pirate,Dex,Bluff,PW
 Spacefarer,Con,Physical Science,CRB
