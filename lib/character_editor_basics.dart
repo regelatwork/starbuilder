@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:star_builder/character.dart';
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
-import 'dart:io';
-import 'dart:async';
-import 'package:path_provider/path_provider.dart';
 import 'package:star_builder/database_theme.dart';
 import 'package:star_builder/pdf_generator.dart';
 
@@ -31,12 +28,22 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
+        Text("Character Name"),
         TextField(
           onSubmitted: _onNameChange,
         ),
+        Text("Theme"),
         DropdownButton<SfTheme>(
           items: ThemeDb.themes.map((SfTheme theme) {
-            return DropdownMenuItem<SfTheme>(value: theme, child: Text(theme.name));
+            return DropdownMenuItem<SfTheme>(
+              value: theme,
+              child: Row(
+                children: <Widget>[
+                  Text(theme.name),
+                  Text(theme.attributes.toString()),
+                ],
+              ),
+            );
           }).toList(),
           onChanged: (SfTheme value) {},
         ),
@@ -64,6 +71,4 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
     }
     StarfinderCharacter.activeCharacter.name = newValue;
   }
-
-  void _onNameEditComplete() {}
 }

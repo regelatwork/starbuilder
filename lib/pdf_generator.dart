@@ -9,12 +9,19 @@ class PdfGenerator {
     PDFGraphics g = page.getGraphics();
     PDFFont font = new PDFFont(pdf);
     double top = page.pageFormat.height;
-
     g.setColor(new PDFColor(0.3, 0.3, 0.3));
+
+    // Name
     g.drawString(font, 14.0, "Character Name", 10.0 * PDFPageFormat.mm,
         top - 10.0 * PDFPageFormat.mm);
     g.drawString(font, 14.0, character.name, 60.0 * PDFPageFormat.mm,
         top - 10.0 * PDFPageFormat.mm);
+
+    // Theme
+    g.drawString(font, 14.0, "Theme", 10.0 * PDFPageFormat.mm,
+        top - 20.0 * PDFPageFormat.mm);
+    g.drawString(font, 14.0, character.theme, 60.0 * PDFPageFormat.mm,
+        top - 20.0 * PDFPageFormat.mm);
 
     return pdf;
   }
