@@ -1,0 +1,26 @@
+Ace Pilot,Dex,Piloting,CRB
+Biotechnician,Int,Medicine,PW
+Bounty Hunter,Con,Survival,CRB
+Colonist,Con,Survival,AP7
+Corporate Agent,Cha,Diplomacy,PW
+Cultist,Con,Disguise,PW
+Cyberborn,Int,Computers,PW
+Death-Touched,Con,Perception,PW
+Dragonblood,Cha,Culture,PW
+Dream Prophet,Wis,Mysticism,PW
+Gladiator,Con,Intimidate,PW
+Icon,Cha,Culture,CRB
+Mercenary,Str,Athletics,CRB
+Outlaw,Dex,Sleight of Hand,CRB
+Paranormal Investigator,"[Int, Wis, Cha]","[Diplomacy, Life Science, Mysticism, Physical Science, Survival]",AP10
+Priest,Wis,Mysticism,CRB
+Roboticist,Int,Computers,PW
+Scholar,Int,"[Life Science, Physical Science]",CRB
+Solar Disciple,Wis,Perception,PW
+Space Pirate,Dex,Bluff,PW
+Spacefarer,Con,Physical Science,CRB
+Tempered Pilgrim,Cha,Culture,PW
+Wild Warden,Wis,Survival,PW
+Xenoarchaeologist,Int,Engineering,PW
+Xenoseeker,Cha,Life Science,CRB
+Themeless,*,*,CRB
