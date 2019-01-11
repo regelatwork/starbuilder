@@ -1,5 +1,6 @@
 import 'dart:core';
 
+import 'package:star_builder/database_race.dart';
 import 'package:star_builder/database_theme.dart';
 
 class StarfinderCharacter {
@@ -10,18 +11,22 @@ class StarfinderCharacter {
   String ruleset;
   String allowedSources; // "All books", "All Hardcovers", "Custom Set"
   List<String> customSources;
-  String race;
+  SfRace race;
   String levels;
   SfTheme theme;
 
   StarfinderCharacter(String name, String race, String levels, String theme) {
     this.name = name;
-    this.race = race;
+    this.race = RaceDb.getRace(race);
     this.levels = levels;
     this.theme = ThemeDb.getTheme(theme);
   }
 
   getThemeName() {
-    return theme != null ? theme.name : "X";
+    return theme != null ? theme.name : "";
+  }
+
+  String getRaceName() {
+    return race != null ? race.name : "";
   }
 }

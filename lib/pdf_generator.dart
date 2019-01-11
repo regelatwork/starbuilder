@@ -23,6 +23,12 @@ class PdfGenerator {
     g.drawString(font, 14.0, character.getThemeName(), 60.0 * PDFPageFormat.mm,
         top - 20.0 * PDFPageFormat.mm);
 
+    // Race
+    g.drawString(font, 14.0, "Race", 10.0 * PDFPageFormat.mm,
+        top - 30.0 * PDFPageFormat.mm);
+    g.drawString(font, 14.0, character.getRaceName(), 60.0 * PDFPageFormat.mm,
+        top - 30.0 * PDFPageFormat.mm);
+
     return pdf;
   }
 }

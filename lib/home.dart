@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
       title: Text(character.name),
       subtitle: Text(character.getThemeName() +
           " " +
-          character.race +
+          character.getRaceName() +
           " " +
           character.levels),
       enabled: index % 2 == 0,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
 import 'package:star_builder/character.dart';
+import 'package:star_builder/database_race.dart';
 import 'package:star_builder/database_theme.dart';
 import 'package:star_builder/pdf_generator.dart';
 
@@ -13,6 +14,7 @@ class CharacterEditorBasics extends StatefulWidget {
 class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
   String name = StarfinderCharacter.activeCharacter.name;
   SfTheme theme = StarfinderCharacter.activeCharacter.theme;
+  SfRace race = StarfinderCharacter.activeCharacter.race;
 
   void _print() {
     PDFDocument pdf =
@@ -31,6 +33,7 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
+        // Character Name
         TextField(
           decoration: InputDecoration(
             labelText: "Character Name",
@@ -38,6 +41,8 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
           ),
           onSubmitted: _onNameChange,
         ),
+
+        // Theme
         Text("Theme"),
         DropdownButton<SfTheme>(
           value: theme,
@@ -54,6 +59,25 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
           }).toList(),
           onChanged: _onThemeChange,
         ),
+
+        // Race
+        Text("Race"),
+        DropdownButton<SfRace>(
+          value: race,
+          items: RaceDb.races.map((SfRace race) {
+            return DropdownMenuItem<SfRace>(
+              value: race,
+              child: Row(
+                children: <Widget>[
+                  Text(race.name),
+                ],
+              ),
+            );
+          }).toList(),
+          onChanged: _onRaceChange,
+        ),
+
+        // Print / Share PDF
         MaterialButton(
           color: Colors.blue,
           child: Text(
@@ -86,6 +110,13 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
     StarfinderCharacter.activeCharacter.theme = newTheme;
     setState(() {
       theme = newTheme;
+    });
+  }
+
+  void _onRaceChange(SfRace newRace) {
+    StarfinderCharacter.activeCharacter.race = newRace;
+    setState(() {
+      race = newRace;
     });
   }
 }
