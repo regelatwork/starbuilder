@@ -9,6 +9,7 @@ class SourceDb {
     final csvCodec = new CsvCodec();
     String csvData = await rootBundle.loadString('assets/data/sources.csv');
     List<List<dynamic>> rows = csvCodec.decoder.convert(csvData);
+    rows.removeAt(0);
 
     // Populate the theme list
     for (List<dynamic> row in rows) {
