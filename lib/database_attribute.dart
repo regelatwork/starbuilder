@@ -1,3 +1,5 @@
+/// Datastore for Attribute objects. This datastore doesn't use a CSV to back it
+/// since no changes are expected.
 class AttributeDb {
   static List<SfAttribute> attributes = <SfAttribute>[
     SfAttribute.strength,
