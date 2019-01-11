@@ -14,41 +14,43 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<StarfinderCharacter> characters = [
-    StarfinderCharacter("Nugget", "Ysoki", "Mechanic:8", "Xenoarchaeologist"),
-    StarfinderCharacter("Koggar", "Nuar", "Soldier:1", "Ace Pilot"),
-    StarfinderCharacter("Vylit", "Shirren", "Mystic:4", "Ace Pilot"),
-  ];
-
   void _newCharacter() {
-    StarfinderCharacter character = new StarfinderCharacter("NEW CHAR", "Human", "Solider:1", "Colonist");
+    StarfinderCharacter character =
+        new StarfinderCharacter("NEW CHAR", "Human", "Solider:1", "Colonist");
     StarfinderCharacter.activeCharacter = character;
-    characters.add(character);
+    StarfinderCharacter.characters.add(character);
     Navigator.pushNamed(context, CharacterEditor.ROUTE);
   }
+
   void _editCharacter(StarfinderCharacter character) {
     StarfinderCharacter.activeCharacter = character;
     Navigator.pushNamed(context, CharacterEditor.ROUTE);
   }
-  void _displayOptions() {
-  }
-  void _defaults() {
-  }
+
+  void _displayOptions() {}
+
+  void _defaults() {}
 
   Widget buildBody(BuildContext ctxt, int index) {
-    StarfinderCharacter character = characters[index];
+    StarfinderCharacter character = StarfinderCharacter.characters[index];
     return ListTile(
       title: Text(character.name),
-        subtitle: Text(character.theme+" "+character.race+" "+character.levels),
-      enabled: index%2==0,
-    onTap: (){_editCharacter(character);},
+      subtitle: Text(character.getThemeName() +
+          " " +
+          character.race +
+          " " +
+          character.levels),
+      enabled: index % 2 == 0,
+      onTap: () {
+        _editCharacter(character);
+      },
     );
   }
 
   ListView _buildList(context) {
     return ListView.builder(
-        itemCount: characters.length,
-        itemBuilder: (BuildContext ctxt, int index) =>buildBody(ctxt, index),
+      itemCount: StarfinderCharacter.characters.length,
+      itemBuilder: (BuildContext ctxt, int index) => buildBody(ctxt, index),
     );
   }
 

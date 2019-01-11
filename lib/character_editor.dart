@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:star_builder/character.dart';
-import 'package:pdf/pdf.dart';
-import 'package:printing/printing.dart';
-import 'dart:io';
-import 'dart:async';
-import 'package:path_provider/path_provider.dart';
 import 'package:star_builder/character_editor_basics.dart';
-import 'package:star_builder/pdf_generator.dart';
 
 class CharacterEditor extends StatefulWidget {
   static const String ROUTE = "char/";

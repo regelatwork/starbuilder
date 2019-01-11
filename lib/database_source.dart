@@ -11,36 +11,35 @@ class SourceDb {
     List<List<dynamic>> rows = csvCodec.decoder.convert(csvData);
 
     // Populate the theme list
-    for(List<dynamic> row in rows) {
+    for (List<dynamic> row in rows) {
       String shortName = row[0];
       String longName = row[1];
-      bool hardcover = row[2]=='Y'?true:false;
+      bool hardcover = row[2] == 'Y' ? true : false;
       String adventurePath = row[3];
-      sources.add(SfSource(shortName,longName,hardcover,adventurePath));
+      sources.add(SfSource(shortName, longName, hardcover, adventurePath));
     }
   }
 
   static List<SfSource> parseCell(String input) {
-    if(input[0] == '[') {
-      input = input.substring(1, input.length-1);
+    if (input[0] == '[') {
+      input = input.substring(1, input.length - 1);
       List<SfSource> sources = <SfSource>[];
-      for(String source in input.split(',')) {
+      for (String source in input.split(',')) {
         sources.add(SourceDb.parse(source));
       }
       return sources;
-    }
-    else {
+    } else {
       return <SfSource>[SourceDb.parse(input)];
     }
   }
 
   static SfSource parse(String input) {
-    for(SfSource source in sources) {
-      if(input == source.shortName) {
+    for (SfSource source in sources) {
+      if (input == source.shortName) {
         return source;
       }
     }
-    throw Exception("Invalid Source: "+input);
+    throw Exception("Invalid Source: " + input);
   }
 }
 

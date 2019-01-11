@@ -20,7 +20,7 @@ class PdfGenerator {
     // Theme
     g.drawString(font, 14.0, "Theme", 10.0 * PDFPageFormat.mm,
         top - 20.0 * PDFPageFormat.mm);
-    g.drawString(font, 14.0, character.theme, 60.0 * PDFPageFormat.mm,
+    g.drawString(font, 14.0, character.getThemeName(), 60.0 * PDFPageFormat.mm,
         top - 20.0 * PDFPageFormat.mm);
 
     return pdf;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:star_builder/character.dart';
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
+import 'package:star_builder/character.dart';
 import 'package:star_builder/database_theme.dart';
 import 'package:star_builder/pdf_generator.dart';
 
@@ -34,6 +34,7 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
         ),
         Text("Theme"),
         DropdownButton<SfTheme>(
+          value: StarfinderCharacter.activeCharacter.theme,
           items: ThemeDb.themes.map((SfTheme theme) {
             return DropdownMenuItem<SfTheme>(
               value: theme,
@@ -45,7 +46,7 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
               ),
             );
           }).toList(),
-          onChanged: (SfTheme value) {},
+          onChanged: _onThemeChange,
         ),
         MaterialButton(
           color: Colors.blue,
@@ -65,10 +66,14 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
     );
   }
 
-  void _onNameChange(String newValue) {
-    if (newValue.trim() == "") {
+  void _onNameChange(String newName) {
+    if (newName.trim() == "") {
       return;
     }
-    StarfinderCharacter.activeCharacter.name = newValue;
+    StarfinderCharacter.activeCharacter.name = newName;
+  }
+
+  void _onThemeChange(SfTheme newTheme) {
+    StarfinderCharacter.activeCharacter.theme = newTheme;
   }
 }

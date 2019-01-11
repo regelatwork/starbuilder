@@ -1,23 +1,24 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:star_builder/character.dart';
 import 'package:star_builder/character_editor.dart';
 import 'package:star_builder/database_source.dart';
 import 'package:star_builder/database_theme.dart';
 import 'package:star_builder/home.dart';
 
-void main() {
-  SourceDb.loadDatabase();
-  ThemeDb.loadDatabase();
+Future main() async {
+  await SourceDb.loadDatabase();
+  await ThemeDb.loadDatabase();
+  StarfinderCharacter.characters = [
+    StarfinderCharacter("Nugget", "Ysoki", "Mechanic:8", "Xenoarchaeologist"),
+    StarfinderCharacter("Koggar", "Nuar", "Soldier:1", "Ace Pilot"),
+    StarfinderCharacter("Vylit", "Shirren", "Mystic:4", "Ace Pilot"),
+  ];
   runApp(StarBuilderApp());
 }
 
 class StarBuilderApp extends StatelessWidget {
-//  @override
-//  void initState() {
-//    final json = JSON.decode(
-//        DefaultAssetBundle.of(context).loadString("assets/data.json")
-//    );
-//  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

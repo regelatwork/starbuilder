@@ -1,10 +1,13 @@
+import 'dart:core';
+
 import 'package:csv/csv.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:star_builder/database_attribute.dart';
 import 'package:star_builder/database_source.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 class ThemeDb {
   static List<SfTheme> themes = <SfTheme>[];
+  static Map<String, SfTheme> map = new Map();
 
   static loadDatabase() async {
     // Read the data from files
@@ -13,16 +16,20 @@ class ThemeDb {
     List<List<dynamic>> rows = csvCodec.decoder.convert(csvData);
 
     // Populate the theme list
-    for(List<dynamic> row in rows) {
-//      debugger(message: row.toString());
-//      debugger(message: row[0].toString());
+    for (List<dynamic> row in rows) {
       String name = row[0];
       List<SfAttribute> attributes = AttributeDb.parseCell(row[1]);
       List<String> skills = <String>[];
       List<SfSource> sources = SourceDb.parseCell(row[3]);
-      themes.add(SfTheme(name,attributes,skills,sources));
+      SfTheme theme = SfTheme(name, attributes, skills, sources);
+      themes.add(theme);
+      map.putIfAbsent(name, () => theme);
     }
-}
+  }
+
+  static SfTheme getTheme(String theme) {
+    return map[theme];
+  }
 }
 
 class SfTheme {
