@@ -1,14 +1,30 @@
-Name,Source
-Android,CRB
-Dwarf,CRB
-Elf,CRB
-Gnome,CRB
-Half-elf,CRB
-Half-orc,CRB
-Halfling,CRB
-Human,CRB
-Kasatha,CRB
-Lashunta,CRB
-Shirren,CRB
-Vesk,CRB
-Ysoki,CRB
+Name,Morphism,Morphology,Source,STR,DEX,CON,INT,WIS,CHA,ANY,HP,Size,Type,Subtype,Blindsense (Vibration),Darkvision,Low-light Vision,Abilities,Skills,Base Speed,Climb Speed,Fly Speed,Swim Speed
+Android,,,CRB,,2,,2,,-2,,4,M,Hummanoid,Android,,60,TRUE,[Constructed,Exceptional Vision,Flat Affect,Upgrade Slot],{Sense Motive:-2},30,,,
+Borai,Old Talents,Android,PW,,,2,,-2,2,,6,M,Undead,,,60,,[Deathly,Living Shell,Old Talents,Resist Energy Drain],,30,,,
+Borai,Old Talents,Human,PW,,,2,,-2,2,,6,M,Undead,,,60,,[Deathly,Living Shell,Old Talents,Resist Energy Drain],,30,,,
+Borai,Old Talents,Kasatha,PW,,,2,,-2,2,,6,M,Undead,,,60,,[Deathly,Living Shell,Old Talents,Resist Energy Drain],,30,,,
+Borai,Old Talents,Lashunta,PW,,,2,,-2,2,,6,M,Undead,,,60,,[Deathly,Living Shell,Old Talents,Resist Energy Drain],,30,,,
+Borai,Old Talents,Shirren,PW,,,2,,-2,2,,6,M,Undead,,,60,,[Deathly,Living Shell,Old Talents,Resist Energy Drain],,30,,,
+Borai,Old Talents,Vesk,PW,,,2,,-2,2,,6,M,Undead,,,60,,[Deathly,Living Shell,Old Talents,Resist Energy Drain],,30,,,
+Borai,Old Talents,Ysoki,PW,,,2,,-2,2,,6,S,Undead,,,60,,[Deathly,Living Shell,Old Talents,Resist Energy Drain],,30,,,
+Dwarf,,,CRB,,,2,,2,-2,,6,M,Hummanoid,Dwarf,,60,,[Slow but Steady,Stonecunning,Traditional Enemies,Weapon Familiarity],,20,,,
+Elf,,,CRB,,2,-2,2,,,,4,M,Hummanoid,Elf,,,TRUE,[Elven Immunities,Elven Magic,Keen Senses],{Perception:+2},30,,,
+Ghibrani,Subspecies,Husk,AP5,,,2,-2,2,,,4,M,Hummanoid,Ghibrani,,,TRUE,[Affable,Ghibrani Movement,Sturdy],{Diplomacy:+2},30,20,,
+Ghibrani,Subspecies,Membrane,AP5,-2,2,,,2,,,4,M,Hummanoid,Ghibrani,,,TRUE,[Affable,Ghibrani Movement,Distracting Buzz],{Diplomacy:+2},30,,20 (average),
+Gnome,Dimorphic,Feychild,CRB,-2,,2,,,2,,4,S,Hummanoid,Gnome,,,TRUE,[Curious,Dimorphic,Eternal Hope,Gnome Magic],{Culture:+2},30,,,
+Gnome,Dimorphic,Bleachling,CRB,-2,,2,2,,,,4,S,Hummanoid,Gnome,,,TRUE,[Curious,Dimorphic,Eternal Hope,Gnome Magic],{Culture:+2},30,,,
+Half-elf,,,CRB,,,,,,,[2],4,M,Hummanoid,[Elf,Human],,,TRUE,[Adaptability,Elven Blood,Keen Senses],{Perception:+2},30,,,
+Half-orc,,,CRB,,,,,,,[2],6,M,Hummanoid,[Human,Orc],,60,,[Intimidating,Orc Ferocity,Self-Sufficient],{Intimidate:+2,Surival:+2},30,,,
+Halfling,,,CRB,-2,2,,,,2,,2,S,Hummanoid,Halfling,,,,[Halfling Luck,Keen Senses,Sneaky,Sure-Footed],{Perception:+2,Stealth:+2,Acrobatics:+2,Athletics:+2},30,,,
+Human,,,CRB,,,,,,,[2],4,M,Hummanoid,Human,,,,[Bonus Feat,Skilled],,30,,,
+Kasatha,,,CRB,2,,,-2,2,,,4,M,Hummanoid,Kasatha,,,,[Desert Stride,Four-Armed,Historian,Natural Grace],,30,,,
+Lashunta,Dimorphic,Damaya,CRB,,,-2,2,,2,,4,M,Hummanoid,Lashunta,,,,[Dimorphic,Lashunta Magic,Limited Telepathy,Student],{*:+2,*:+2},30,,,
+Lashunta,Dimorphic,Korasha,CRB,2,,,,-2,2,,4,M,Hummanoid,Lashunta,,,,[Dimorphic,Lashunta Magic,Limited Telepathy,Student],{*:+2,*:+2},30,,,
+Nuar,,,AA,2,-2,,2,,,,6,M,Monstrous Humanoid,,,60,,[Gore,Maze Mind,Natural Weapons,Swift],,40,,,
+Ryphorian,Trimorphic,Summerborn ,AA,-2,,2,,2,,,4,M,Hummanoid,Ryphorian,,,,[Bonus Feat,Keen Senses,Trimorphic],{Perception:+2},30,,,
+Ryphorian,Trimorphic,Winterborn ,AA,-2,,2,,2,,,4,M,Hummanoid,Ryphorian,,,,[Bonus Feat,Keen Senses,Trimorphic],{Perception:+2},30,,,
+Ryphorian,Trimorphic,Transitional ,AA,-2,,2,,2,,,4,M,Hummanoid,Ryphorian,,,,[Bonus Feat,Keen Senses,Trimorphic],{Perception:+2},30,,,
+Shirren,,,CRB,,,2,,2,-2,,6,M,Hummanoid,Shirren,30,,,[Communalism,Cultural Fascination,Limited Telepathy],{Culture:+2,Diplomacy:+2},30,,,
+Skittermander,,,AA,,2,,-2,,2,,2,S,Hummanoid,Skittermander,,,TRUE,[Grappler,Hyper,Six-Armed],,30,,,
+Vesk,,,CRB,2,,2,-2,,,,6,M,Hummanoid,Vesk,,,TRUE,[Armor Savant,Fearless,Natural Weapons],,30,,,
+Ysoki,,,CRB,-2,2,,2,,,,2,S,Hummanoid,Ysoki,,60,,[Cheek Pouches,Moxie,Scrounger],{Engineering:+2,Stealth:+2,Survival:+2},30,,,
