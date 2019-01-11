@@ -40,7 +40,6 @@ class _HomeState extends State<Home> {
           character.getRaceName() +
           " " +
           character.levels),
-      enabled: index % 2 == 0,
       onTap: () {
         _editCharacter(character);
       },
