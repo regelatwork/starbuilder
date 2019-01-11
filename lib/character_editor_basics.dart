@@ -11,6 +11,9 @@ class CharacterEditorBasics extends StatefulWidget {
 }
 
 class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
+  String name = StarfinderCharacter.activeCharacter.name;
+  SfTheme theme = StarfinderCharacter.activeCharacter.theme;
+
   void _print() {
     PDFDocument pdf =
         PdfGenerator.generateForCharacter(StarfinderCharacter.activeCharacter);
@@ -28,13 +31,16 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Text("Character Name"),
         TextField(
+          decoration: InputDecoration(
+            labelText: "Character Name",
+            hintText: name,
+          ),
           onSubmitted: _onNameChange,
         ),
         Text("Theme"),
         DropdownButton<SfTheme>(
-          value: StarfinderCharacter.activeCharacter.theme,
+          value: theme,
           items: ThemeDb.themes.map((SfTheme theme) {
             return DropdownMenuItem<SfTheme>(
               value: theme,
@@ -71,9 +77,15 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
       return;
     }
     StarfinderCharacter.activeCharacter.name = newName;
+    setState(() {
+      name = newName;
+    });
   }
 
   void _onThemeChange(SfTheme newTheme) {
     StarfinderCharacter.activeCharacter.theme = newTheme;
+    setState(() {
+      theme = newTheme;
+    });
   }
 }
