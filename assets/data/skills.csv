@@ -13,7 +13,7 @@ Medicine,Int,N,N,✓,✓,✓,✓,✓,,✓,,✓,
 Mysticism,Wis,N,N,,,,✓,,✓,,✓,✓,✓
 Perception,Wis,Y,N,✓,✓,✓,✓,✓,✓,,,✓,
 Physical Science,Int,N,N,✓,,✓,,,✓,,✓,✓,✓
-Piloting,Dex,Yes,N,,✓,✓,,✓,,✓,✓,,
+Piloting,Dex,Y,N,,✓,✓,,✓,,✓,✓,,
 Profession,"[Int,Wis,Cha]",N,N,✓,✓,✓,✓,✓,✓,✓,✓,✓,✓
 Sense Motive,Wis,Y,N,✓,✓,,✓,✓,✓,,,,
 Sleight of Hand,Dex,N,Y,✓,✓,,,✓,,,✓,,
