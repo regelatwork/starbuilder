@@ -1,0 +1,21 @@
+Name,Ability,Untrained,Armor Check,Biohacker,Envoy,Mechanic,Mystic,Operative,Solarian,Soldier,Technomancer,Vanguard,Witchwarper
+Acrobatics,Dex,Y,Y,,✓,,,✓,✓,✓,,✓,✓
+Athletics,Str,Y,Y,,✓,✓,,✓,✓,✓,,✓,
+Bluff,Cha,Y,N,✓,✓,,✓,✓,,,,,✓
+Computers,Int,N,N,✓,✓,✓,,✓,,,✓,,
+Culture,Int,N,N,✓,✓,,✓,✓,,,,✓,✓
+Diplomacy,Cha,Y,N,✓,✓,,✓,,✓,,,✓,✓
+Disguise,Cha,Y,N,,✓,,✓,✓,,,,,
+Engineering,Int,N,N,✓,✓,✓,,✓,,✓,✓,,
+Intimidate,Cha,Y,N,,✓,,✓,✓,✓,✓,,✓,✓
+Life Science,Int,N,N,✓,,,✓,,,,✓,,
+Medicine,Int,N,N,✓,✓,✓,✓,✓,,✓,,✓,
+Mysticism,Wis,N,N,,,,✓,,✓,,✓,✓,✓
+Perception,Wis,Y,N,✓,✓,✓,✓,✓,✓,,,✓,
+Physical Science,Int,N,N,✓,,✓,,,✓,,✓,✓,✓
+Piloting,Dex,Yes,N,,✓,✓,,✓,,✓,✓,,
+Profession,"[Int,Wis,Cha]",N,N,✓,✓,✓,✓,✓,✓,✓,✓,✓,✓
+Sense Motive,Wis,Y,N,✓,✓,,✓,✓,✓,,,,
+Sleight of Hand,Dex,N,Y,✓,✓,,,✓,,,✓,,
+Stealth,Dex,Y,Y,,✓,,,✓,✓,,,,
+Survival,Wis,Y,N,,,,✓,✓,,✓,,✓,
