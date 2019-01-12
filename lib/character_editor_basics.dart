@@ -99,7 +99,6 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
             onChanged: _onClasseChange,
           ),
 
-
           // Print / Share PDF
           MaterialButton(
             color: Colors.blue,

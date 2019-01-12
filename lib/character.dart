@@ -16,8 +16,8 @@ class StarfinderCharacter {
   SfClass baseClass;
   SfTheme theme;
 
-  StarfinderCharacter(
-      String name, String raceName, String raceSubname, String baseClass, String theme) {
+  StarfinderCharacter(String name, String raceName, String raceSubname,
+      String baseClass, String theme) {
     this.name = name;
     this.race = RaceDb.getRace(raceName, raceSubname);
     this.baseClass = ClassDb.getClass(baseClass);
@@ -33,13 +33,10 @@ class StarfinderCharacter {
     if (race == null) {
       return "X";
     }
-    return race.subname == ""
-        ? race.name
-        :  race.subname + " " + race.name;
+    return race.subname == "" ? race.name : race.subname + " " + race.name;
   }
 
   String getBaseClassName() {
     return baseClass != null ? baseClass.name : "X";
   }
-
 }

@@ -23,7 +23,7 @@ class RaceDb {
       races.add(race);
       racesByName.putIfAbsent(name, () => <SfRace>[]);
       racesByName[name].add(race);
-      racesBySubname.putIfAbsent(name+subname, () => race);
+      racesBySubname.putIfAbsent(name + subname, () => race);
     }
   }
 
@@ -32,7 +32,7 @@ class RaceDb {
   }
 
   static SfRace getRace(String name, String subname) {
-    return racesBySubname[name+subname];
+    return racesBySubname[name + subname];
   }
 }
 

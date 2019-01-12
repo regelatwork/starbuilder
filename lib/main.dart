@@ -15,8 +15,7 @@ Future main() async {
   await RaceDb.loadDatabase();
   await ClassDb.loadDatabase();
   StarfinderCharacter.characters = [
-    StarfinderCharacter(
-        "Nugget", "Ysoki", "", "Mechanic", "Xenoarchaeologist"),
+    StarfinderCharacter("Nugget", "Ysoki", "", "Mechanic", "Xenoarchaeologist"),
     StarfinderCharacter("Koggar", "Nuar", "", "Soldier", "Ace Pilot"),
     StarfinderCharacter("Vylit", "Shirren", "", "Mystic", "Ace Pilot"),
     StarfinderCharacter(

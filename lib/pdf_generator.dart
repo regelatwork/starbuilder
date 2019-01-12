@@ -32,8 +32,8 @@ class PdfGenerator {
     // Class
     g.drawString(font, 14.0, "Class", 10.0 * PDFPageFormat.mm,
         top - 40.0 * PDFPageFormat.mm);
-    g.drawString(font, 14.0, character.getBaseClassName(), 60.0 * PDFPageFormat.mm,
-        top - 40.0 * PDFPageFormat.mm);
+    g.drawString(font, 14.0, character.getBaseClassName(),
+        60.0 * PDFPageFormat.mm, top - 40.0 * PDFPageFormat.mm);
 
     return pdf;
   }
