@@ -52,5 +52,6 @@ class SfSource {
   final String adventurePath;
   final bool sfs;
 
-  SfSource(this.shortName, this.longName, this.hardcover, this.adventurePath, this.sfs);
+  SfSource(this.shortName, this.longName, this.hardcover, this.adventurePath,
+      this.sfs);
 }

@@ -13,9 +13,12 @@ Future main() async {
   await ThemeDb.loadDatabase();
   await RaceDb.loadDatabase();
   StarfinderCharacter.characters = [
-    StarfinderCharacter("Nugget", "Ysoki", "Mechanic:8", "Xenoarchaeologist"),
-    StarfinderCharacter("Koggar", "Nuar", "Soldier:1", "Ace Pilot"),
-    StarfinderCharacter("Vylit", "Shirren", "Mystic:4", "Ace Pilot"),
+    StarfinderCharacter(
+        "Nugget", "Ysoki", "", "Mechanic:8", "Xenoarchaeologist"),
+    StarfinderCharacter("Koggar", "Nuar", "", "Soldier:1", "Ace Pilot"),
+    StarfinderCharacter("Vylit", "Shirren", "", "Mystic:4", "Ace Pilot"),
+    StarfinderCharacter(
+        "Duality", "Lashunta", "Damaya", "Techomancer:4", "Cyberborn"),
   ];
   runApp(StarBuilderApp());
 }

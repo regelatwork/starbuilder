@@ -1,4 +1,4 @@
-Name,Morphism,Morphology,Source,STR,DEX,CON,INT,WIS,CHA,ANY,HP,Size,Reach,Type,Subtype,Senses,Abilities,Skills,Bonus Skills,Bonus Feats,Natural Weapon,AC,Resistance,Resistance(Stackable),Base Speed,Climb Speed,Fly Speed,Swim Speed,Burrow Speed,Avg. Height,Avg. Weight,Age of Maturity,Max. Age
+Name,Division,Subname,Source,STR,DEX,CON,INT,WIS,CHA,ANY,HP,Size,Reach,Type,Subtype,Senses,Abilities,Skills,Bonus Skills,Bonus Feats,Natural Weapon,AC,Resistance,Resistance(Stackable),Base Speed,Climb Speed,Fly Speed,Swim Speed,Burrow Speed,Avg. Height,Avg. Weight,Age of Maturity,Max. Age
 Android,,,CRB,,2,,2,,-2,,4,M,5,Hummanoid,Android,"[Darkvision 60',Low-Light Vision]","[Constructed,Flat Affect,Upgrade Slot]",{Sense Motive:-2},,,,,,,30,,,,,,,,
 Astrazoan,,,PW,,2,-2,,,2,,4,M,5,Aberration,Shapechanger,Darkvision 60',"[Change Form,Compression,Many Forms,Rapid Revival]",,,,,,,,30,,,,,5-7 ft.,120-160 lbs.,16 years,80+2d20 years
 Bolida,,,AA2,2,-2,2,,,,,6,M,5,Vermin,,"[Blindsense (Vibration) 30',Darkvision 60',Low-Light Vision,Light Blindness]","[Defensive Ball,Rolling Charge]",,,,,1,,fire 5,30,,,,30,6-1/2 to 7-1/2 ft.,300–400 lbs.,5 years,110+4d20 years

@@ -15,8 +15,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   void _newCharacter() {
-    StarfinderCharacter character =
-        new StarfinderCharacter("NEW CHAR", "Human", "Solider:1", "Colonist");
+    StarfinderCharacter character = new StarfinderCharacter(
+        "NEW CHAR", "Human", "", "Solider:1", "Colonist");
     StarfinderCharacter.activeCharacter = character;
     StarfinderCharacter.characters.add(character);
     Navigator.pushNamed(context, CharacterEditor.ROUTE);

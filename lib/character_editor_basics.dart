@@ -30,69 +30,72 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        // Character Name
-        TextField(
-          decoration: InputDecoration(
-            labelText: "Character Name",
-            hintText: name,
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          // Character Name
+          TextField(
+            decoration: InputDecoration(
+              labelText: "Character Name",
+              hintText: name,
+            ),
+            onSubmitted: _onNameChange,
+            // TODO - See if we can make it so that tapping away updates
           ),
-          onSubmitted: _onNameChange,
-        ),
 
-        // Theme
-        Text("Theme"),
-        DropdownButton<SfTheme>(
-          value: theme,
-          items: ThemeDb.themes.map((SfTheme theme) {
-            return DropdownMenuItem<SfTheme>(
-              value: theme,
-              child: Row(
-                children: <Widget>[
-                  Text(theme.name),
-                  Text(theme.attributes.toString()),
-                ],
-              ),
-            );
-          }).toList(),
-          onChanged: _onThemeChange,
-        ),
-
-        // Race
-        Text("Race"),
-        DropdownButton<SfRace>(
-          value: race,
-          items: RaceDb.races.map((SfRace race) {
-            return DropdownMenuItem<SfRace>(
-              value: race,
-              child: Row(
-                children: <Widget>[
-                  Text(race.name),
-                ],
-              ),
-            );
-          }).toList(),
-          onChanged: _onRaceChange,
-        ),
-
-        // Print / Share PDF
-        MaterialButton(
-          color: Colors.blue,
-          child: Text(
-            'Print',
+          // Theme
+          Text("Theme"),
+          DropdownButton<SfTheme>(
+            value: theme,
+            items: ThemeDb.themes.map((SfTheme theme) {
+              return DropdownMenuItem<SfTheme>(
+                value: theme,
+                child: Row(
+                  children: <Widget>[
+                    Text(theme.name),
+                    Text(theme.attributes.toString()),
+                  ],
+                ),
+              );
+            }).toList(),
+            onChanged: _onThemeChange,
           ),
-          onPressed: _print,
-        ),
-        MaterialButton(
-          color: Colors.blue,
-          child: Text(
-            'Share',
+
+          // Race
+          Text("Race"),
+          DropdownButton<SfRace>(
+            value: race,
+            items: RaceDb.races.map((SfRace race) {
+              return DropdownMenuItem<SfRace>(
+                value: race,
+                child: Row(
+                  children: <Widget>[
+                    Text(race.name),
+                  ],
+                ),
+              );
+            }).toList(),
+            onChanged: _onRaceChange,
           ),
-          onPressed: _share,
-        ),
-      ],
+
+          // Print / Share PDF
+          MaterialButton(
+            color: Colors.blue,
+            child: Text(
+              'Print',
+            ),
+            onPressed: _print,
+          ),
+          MaterialButton(
+            color: Colors.blue,
+            child: Text(
+              'Share',
+            ),
+            onPressed: _share,
+          ),
+        ],
+      ),
     );
   }
 

@@ -15,9 +15,10 @@ class StarfinderCharacter {
   String levels;
   SfTheme theme;
 
-  StarfinderCharacter(String name, String race, String levels, String theme) {
+  StarfinderCharacter(
+      String name, String raceName, String raceSubname, String levels, String theme) {
     this.name = name;
-    this.race = RaceDb.getRace(race);
+    this.race = RaceDb.getRace(raceName, raceSubname);
     this.levels = levels;
     this.theme = ThemeDb.getTheme(theme);
   }
@@ -26,7 +27,14 @@ class StarfinderCharacter {
     return theme != null ? theme.name : "";
   }
 
+  // TODO remove this special casing for race subnames.
   String getRaceName() {
-    return race != null ? race.name : "";
+    if (race == null) {
+      return "X";
+    }
+    return race.subname == ""
+        ? race.name
+        :  race.subname + " " + race.name;
   }
+
 }
