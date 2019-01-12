@@ -40,6 +40,7 @@ flutter:
 
   assets:
    - assets/images/starfinder-logo.png
+   - assets/data/classes.csv
    - assets/data/races.csv
    - assets/data/sources.csv
    - assets/data/themes.csv

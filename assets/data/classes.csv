@@ -1,0 +1,11 @@
+Name,Source,HP,Key Ability,Skill Points,Proficiencies
+Biohacker,COM,6,"[Int,Wis]",6,"[Light armor,Basic melee weapons,Grenades,Small arms]"
+Envoy,CRB,6,Cha,8,"[Light armor,Basic melee weapons,Grenades,Small arms]"
+Mechanic,CRB,6,Int,4,"[Light armor,Basic melee weapons,Grenades,Small arms]"
+Mystic,CRB,6,Wis,6,"[Light armor,Basic melee weapons,Small arms]"
+Operative,CRB,6,Dex,8,"[Light armor,Basic melee weapons,Small arms,Sniper weapons]"
+Solarian,CRB,7,Cha,4,"[Light armor,Basic melee weapons,Advanced melee weapons,Small arms]"
+Soldier,CRB,7,"[Str,Dex]",4,"[Light armor,Heavy armor,Basic melee weapons,Advanced melee weapons,Small arms,Longarms,Heavy weapons,Sniper weapons,Grenades]"
+Technomancer,CRB,5,Int,4,"[Light armor,Basic melee weapons,Small arms]"
+Vanguard,COM,8,Con,6,"[Light armor,Heavy armor,Basic melee weapons,Advanced melee weapons,Small arms]"
+Witchwarper,COM,5,Cha,4,"[Light armor,Basic melee weapons,Grenades,Small arms]"

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart';
 import 'package:printing/printing.dart';
 import 'package:star_builder/character.dart';
+import 'package:star_builder/database_class.dart';
 import 'package:star_builder/database_race.dart';
 import 'package:star_builder/database_theme.dart';
 import 'package:star_builder/pdf_generator.dart';
@@ -15,6 +16,7 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
   String name = StarfinderCharacter.activeCharacter.name;
   SfTheme theme = StarfinderCharacter.activeCharacter.theme;
   SfRace race = StarfinderCharacter.activeCharacter.race;
+  SfClass baseClass = StarfinderCharacter.activeCharacter.baseClass;
 
   void _print() {
     PDFDocument pdf =
@@ -79,6 +81,25 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
             onChanged: _onRaceChange,
           ),
 
+          // Base Class
+          Text("Base Class"),
+          DropdownButton<SfClass>(
+            value: baseClass,
+            items: ClassDb.classes.map((SfClass baseClass) {
+              return DropdownMenuItem<SfClass>(
+                value: baseClass,
+                child: Row(
+                  children: <Widget>[
+                    Text(baseClass.name),
+                    Text(baseClass.attributes.toString()),
+                  ],
+                ),
+              );
+            }).toList(),
+            onChanged: _onClasseChange,
+          ),
+
+
           // Print / Share PDF
           MaterialButton(
             color: Colors.blue,
@@ -120,6 +141,13 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
     StarfinderCharacter.activeCharacter.race = newRace;
     setState(() {
       race = newRace;
+    });
+  }
+
+  void _onClasseChange(SfClass newBaseClass) {
+    StarfinderCharacter.activeCharacter.baseClass = newBaseClass;
+    setState(() {
+      baseClass = newBaseClass;
     });
   }
 }

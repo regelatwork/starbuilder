@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
           " " +
           character.getRaceName() +
           " " +
-          character.levels),
+          character.getBaseClassName()),
       onTap: () {
         _editCharacter(character);
       },
