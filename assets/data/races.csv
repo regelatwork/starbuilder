@@ -11,8 +11,8 @@ Borai,Original Living Form,Vesk,PW,,,2,,-2,2,,6,M,5,Undead,,Darkvision 60',"[Dea
 Borai,Original Living Form,Ysoki,PW,,,2,,-2,2,,6,M,5,Undead,,Darkvision 60',"[Cheek Pouches,Deathly,Living Shell,Resist Energy Drain]",,,,,,,,30,,,,,,,,
 Dwarf,,,CRB,,,2,,2,-2,,6,M,5,Hummanoid,Dwarf,Darkvision 60',"[Slow but Steady,Stonecunning,Traditional Enemies,Weapon Familiarity]",,,,,,,,20,,,,,,,,
 Elf,,,CRB,,2,-2,2,,,,4,M,5,Hummanoid,Elf,Low-Light Vision,"[Elven Immunities,Elven Magic]",{Perception:+2},,,,,,,30,,,,,,,,
-Ghibrani,Subspecies,Husk,AP5,,,2,-2,2,,,4,M,5,Hummanoid,Ghibrani,Low-Light Vision,"[Affable,Sturdy]",{Diplomacy:+2},,,,,,,30,20,,,,,,,
-Ghibrani,Subspecies,Membrane,AP5,-2,2,,,2,,,4,M,5,Hummanoid,Ghibrani,Low-Light Vision,"[Affable,Distracting Buzz]",{Diplomacy:+2},,,,,,,30,,ex 20 average,,,,,,
+Ghibrani,Subspecies,Husk,AP5,,,2,-2,2,,,4,M,5,Hummanoid,Ghibrani,Low-Light Vision,Affable,{Diplomacy:+2},,,,,,,30,20,,,,,,,
+Ghibrani,Subspecies,Membrane,AP5,-2,2,,,2,,,4,M,5,Hummanoid,Ghibrani,Low-Light Vision,Distracting Buzz,{Diplomacy:+2},,,,,,,30,,ex 20 average,,,,,,
 Gnome,Dimorphic,Bleachling,CRB,-2,,2,2,,,,4,S,5,Hummanoid,Gnome,Low-Light Vision,"[Eternal Hope,Gnome Magic]",{Culture:+2},,,,,,,30,,,,,,,,
 Gnome,Dimorphic,Feychild,CRB,-2,,2,,,2,,4,S,5,Hummanoid,Gnome,Low-Light Vision,"[Eternal Hope,Gnome Magic]",{Culture:+2},,,,,,,30,,,,,,,,
 Goblin (Space),,,AA,,4,,,,-2,,2,S,5,Hummanoid,Goblinoid,Darkvision 60',Tinker,"{Engineering:+2,Stealth:+2,Survival:+2}",,,,,,,35,,,,,3–4 ft.,30–40 lbs.,7 years,40+1d20 years
