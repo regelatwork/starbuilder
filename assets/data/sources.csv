@@ -1,27 +1,28 @@
-Short Name,Long Name,Hardcover,Adventure Path
-CRB,Core Rulebook,Y,
-PW,Pact Worlds,Y,
-ARM,Armory,Y,
-COM,Character Operations Manual,Y,
-AA,Alien Archive,Y,
-AA2,Alien Archive 2,Y,
-AA3,Alien Archive 3,Y,
-AP1,Incident at Absalom Station,N,Dead Suns
-AP2,Temple of the Twelve,N,Dead Suns
-AP3,Splintered Worlds,N,Dead Suns
-AP4,The Ruined Clouds,N,Dead Suns
-AP5,The Thirteenth Gate,N,Dead Suns
-AP6,Empire of Bones,N,Dead Suns
-AP7,The Reach of the Empire,N,Against the Aeon Throne
-AP8,Escape from the Prison Moon,N,Against the Aeon Throne
-AP9,The Rune Drive Gambit,N,Against the Aeon Throne
-AP10,The Diaspora Strain,N,Signal of Screams
-AP11,The Penumbra Protocol,N,Signal of Screams
-AP12,Heart of Night,N,Signal of Screams
-AP13,Fire Starters,N,Dawn of Flame
-AP14,Soldiers of Brass,N,Dawn of Flame
-AP15,Sun Divers,N,Dawn of Flame
-AP16,The Blind City,N,Dawn of Flame
-AP17,Solar Strike,N,Dawn of Flame
-AP18,Assault on the Crucible,N,Dawn of Flame
-AP19,Fate of the Fifth,N,Attack of the Swarm!
+Short Name,Long Name,Hardcover,Adventure Path,SFS
+CRB,Core Rulebook,Y,,N
+PW,Pact Worlds,Y,,N
+ARM,Armory,Y,,N
+COM,Character Operations Manual,Y,,N
+AA,Alien Archive,Y,,N
+AA2,Alien Archive 2,Y,,N
+AA3,Alien Archive 3,Y,,N
+AP1,Incident at Absalom Station,N,Dead Suns,N
+AP2,Temple of the Twelve,N,Dead Suns,N
+AP3,Splintered Worlds,N,Dead Suns,N
+AP4,The Ruined Clouds,N,Dead Suns,N
+AP5,The Thirteenth Gate,N,Dead Suns,N
+AP6,Empire of Bones,N,Dead Suns,N
+AP7,The Reach of the Empire,N,Against the Aeon Throne,N
+AP8,Escape from the Prison Moon,N,Against the Aeon Throne,N
+AP9,The Rune Drive Gambit,N,Against the Aeon Throne,N
+AP10,The Diaspora Strain,N,Signal of Screams,N
+AP11,The Penumbra Protocol,N,Signal of Screams,N
+AP12,Heart of Night,N,Signal of Screams,N
+AP13,Fire Starters,N,Dawn of Flame,N
+AP14,Soldiers of Brass,N,Dawn of Flame,N
+AP15,Sun Divers,N,Dawn of Flame,N
+AP16,The Blind City,N,Dawn of Flame,N
+AP17,Solar Strike,N,Dawn of Flame,N
+AP18,Assault on the Crucible,N,Dawn of Flame,N
+AP19,Fate of the Fifth,N,Attack of the Swarm!,N
+SFS0108,Sanctuary of Drowned Delight,N,Y

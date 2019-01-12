@@ -17,7 +17,8 @@ class SourceDb {
       String longName = row[1];
       bool hardcover = row[2] == 'Y' ? true : false;
       String adventurePath = row[3];
-      sources.add(SfSource(shortName, longName, hardcover, adventurePath));
+      bool sfs = row[2] == 'Y' ? true : false;
+      sources.add(SfSource(shortName, longName, hardcover, adventurePath, sfs));
     }
   }
 
@@ -49,6 +50,7 @@ class SfSource {
   final String longName;
   final bool hardcover;
   final String adventurePath;
+  final bool sfs;
 
-  SfSource(this.shortName, this.longName, this.hardcover, this.adventurePath);
+  SfSource(this.shortName, this.longName, this.hardcover, this.adventurePath, this.sfs);
 }
