@@ -3,18 +3,20 @@ import 'dart:core';
 import 'package:star_builder/database_class.dart';
 import 'package:star_builder/database_race.dart';
 import 'package:star_builder/database_theme.dart';
+import 'dart:convert';
 
 class StarfinderCharacter {
   static StarfinderCharacter activeCharacter;
   static List<StarfinderCharacter> characters;
 
   String name;
-  String ruleset;
-  String allowedSources; // "All books", "All Hardcovers", "Custom Set"
-  List<String> customSources;
   SfRace race;
   SfClass baseClass;
   SfTheme theme;
+
+  String ruleset;
+  String allowedSources; // "All books", "All Hardcovers", "Custom Set"
+  List<String> customSources;
 
   StarfinderCharacter(String name, String raceName, String raceSubname,
       String baseClass, String theme) {
@@ -39,4 +41,21 @@ class StarfinderCharacter {
   String getBaseClassName() {
     return baseClass != null ? baseClass.name : "X";
   }
+
+  String save() {
+    return jsonEncode(this.toJson());
+  }
+
+  Map<String, dynamic> toJson() {
+    Map<String, dynamic> jsonObject = new Map();
+    Map<String, dynamic> basicInfo = new Map();
+    jsonObject.putIfAbsent("Basic Info", () => basicInfo);
+    basicInfo.putIfAbsent("Name", () => this.name);
+    basicInfo.putIfAbsent("Race", () => this.getRaceName());
+    basicInfo.putIfAbsent("BaseClass", () => this.getBaseClassName());
+    basicInfo.putIfAbsent("Theme", () => this.getThemeName());
+    return jsonObject;
+  }
+
+  static StarfinderCharacter load(String input) {}
 }
