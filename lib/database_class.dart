@@ -2,7 +2,7 @@ import 'dart:core';
 
 import 'package:csv/csv.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:star_builder/database_attribute.dart';
+import 'package:star_builder/database_ability.dart';
 import 'package:star_builder/database_source.dart';
 
 class ClassDb {
