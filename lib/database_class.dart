@@ -21,7 +21,7 @@ class ClassDb {
     for (List<dynamic> row in rows) {
       String name = row[0];
       List<SfSource> sources = SourceDb.parseCell(row[1]);
-      List<SfAbility> attributes = AttributeDb.parseCell(row[3]);
+      List<SfAbility> attributes = AbilityDb.parseCell(row[3]);
       SfClass c = SfClass(name, sources, attributes);
       classes.add(c);
       map.putIfAbsent(name, () => c);

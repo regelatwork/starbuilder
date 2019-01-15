@@ -20,7 +20,7 @@ class ThemeDb {
     // Populate the theme list
     for (List<dynamic> row in rows) {
       String name = row[0];
-      List<SfAbility> attributes = AttributeDb.parseCell(row[1]);
+      List<SfAbility> attributes = AbilityDb.parseCell(row[1]);
       List<String> skills = <String>[];
       List<SfSource> sources = SourceDb.parseCell(row[3]);
       SfTheme theme = SfTheme(name, attributes, skills, sources);

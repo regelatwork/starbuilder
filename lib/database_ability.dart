@@ -1,6 +1,6 @@
 /// Datastore for Attribute objects. This datastore doesn't use a CSV to back it
 /// since no changes are expected.
-class AttributeDb {
+class AbilityDb {
   static List<SfAbility> attributes = <SfAbility>[
     SfAbility.strength,
     SfAbility.dexterity,
