@@ -14,6 +14,14 @@ final bobString = """
     "Race": "Human",
     "BaseClass": "Mystic",
     "Theme": "Colonist"
+  },
+  "Base Ability Scores": {
+    "Str": 12,
+    "Dex": 12,
+    "Con": 12,
+    "Int": 12,
+    "Wis": 13,
+    "Cha": 12
   }
 }
 """;
@@ -21,6 +29,7 @@ final bobString = """
 StarfinderCharacter getBob(){
   StarfinderCharacter character = StarfinderCharacter.fromBasicInfo(
       "Bob", "Human", "", "Mystic", "Colonist");
+  character.setAbilities([12, 12, 12, 12, 13, 12]);
   return character;
 }
 
@@ -31,6 +40,14 @@ final dualityString = """
     "Race": ["Lashunta", "Damaya"],
     "BaseClass": "Technomancer",
     "Theme": "Cyberborn"
+  },
+  "Base Ability Scores": {
+    "Str": 10,
+    "Dex": 14,
+    "Con": 8,
+    "Int": 18,
+    "Wis": 10,
+    "Cha": 13
   }
 }
 """;
@@ -38,6 +55,7 @@ final dualityString = """
 StarfinderCharacter getDuality(){
   StarfinderCharacter character = StarfinderCharacter.fromBasicInfo(
       "\"Duality\"", "Lashunta", "Damaya", "Technomancer", "Cyberborn");
+  character.setAbilities([10,14,8,18,10,13]);
   return character;
 }
 

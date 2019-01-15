@@ -40,17 +40,18 @@ class AttributeDb {
 }
 
 class SfAbility {
-  static SfAbility strength = SfAbility("Str", "Strength");
-  static SfAbility dexterity = SfAbility("Dex", "Dexterity");
-  static SfAbility constitution = SfAbility("Con", "Constitution");
-  static SfAbility intelligence = SfAbility("Int", "Intelligence");
-  static SfAbility wisdom = SfAbility("Wis", "Wisdom");
-  static SfAbility charisma = SfAbility("Cha", "Charisma");
+  static SfAbility strength = SfAbility("Str", "Strength", 0);
+  static SfAbility dexterity = SfAbility("Dex", "Dexterity", 1);
+  static SfAbility constitution = SfAbility("Con", "Constitution", 2);
+  static SfAbility intelligence = SfAbility("Int", "Intelligence", 3);
+  static SfAbility wisdom = SfAbility("Wis", "Wisdom", 4);
+  static SfAbility charisma = SfAbility("Cha", "Charisma", 5);
 
   final String shortName;
   final String longName;
+  final int index;
 
-  SfAbility(this.shortName, this.longName);
+  SfAbility(this.shortName, this.longName, this.index);
 
   @override
   String toString() {
