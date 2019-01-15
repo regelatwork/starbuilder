@@ -1,13 +1,14 @@
 import 'package:csv/csv.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart';
 
 class SourceDb {
   static List<SfSource> sources = <SfSource>[];
+  static String assetName = 'assets/data/sources.csv';
 
-  static loadDatabase() async {
+  static loadDatabase(AssetBundle assetBundle) async {
     // Read the data from files
     final csvCodec = new CsvCodec();
-    String csvData = await rootBundle.loadString('assets/data/sources.csv');
+    String csvData = await assetBundle.loadString(assetName);
     List<List<dynamic>> rows = csvCodec.decoder.convert(csvData);
     rows.removeAt(0);
 

@@ -1,17 +1,18 @@
 import 'dart:core';
 
 import 'package:csv/csv.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart';
 
 class RaceDb {
   static List<SfRace> races = <SfRace>[];
   static Map<String, List<SfRace>> racesByName = new Map();
   static Map<String, SfRace> racesBySubname = new Map();
+  static String assetName = 'assets/data/races.csv';
 
-  static loadDatabase() async {
+  static loadDatabase(AssetBundle assetBundle) async {
     // Read the data from files
     final csvCodec = new CsvCodec();
-    String csvData = await rootBundle.loadString('assets/data/races.csv');
+    String csvData = await assetBundle.loadString(assetName);
     List<List<dynamic>> rows = csvCodec.decoder.convert(csvData);
     rows.removeAt(0);
 
@@ -33,6 +34,15 @@ class RaceDb {
 
   static SfRace getRace(String name, String subname) {
     return racesBySubname[name + subname];
+  }
+
+  static SfRace getRaceFromJson(dynamic json) {
+    if(json is String) {
+      return getRace(json, "");
+    }
+    else{
+      return getRace(json[0], json[1]);
+    }
   }
 }
 

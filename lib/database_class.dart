@@ -1,18 +1,19 @@
 import 'dart:core';
 
 import 'package:csv/csv.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter/services.dart';
 import 'package:star_builder/database_ability.dart';
 import 'package:star_builder/database_source.dart';
 
 class ClassDb {
   static List<SfClass> classes = <SfClass>[];
   static Map<String, SfClass> map = new Map();
+  static String assetName = 'assets/data/classes.csv';
 
-  static loadDatabase() async {
+  static loadDatabase(AssetBundle assetBundle) async {
     // Read the data from files
     final csvCodec = new CsvCodec();
-    String csvData = await rootBundle.loadString('assets/data/classes.csv');
+    String csvData = await assetBundle.loadString(assetName);
     List<List<dynamic>> rows = csvCodec.decoder.convert(csvData);
     rows.removeAt(0);
 

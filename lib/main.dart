@@ -3,22 +3,19 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:star_builder/character.dart';
 import 'package:star_builder/character_editor.dart';
-import 'package:star_builder/database_class.dart';
-import 'package:star_builder/database_race.dart';
-import 'package:star_builder/database_source.dart';
-import 'package:star_builder/database_theme.dart';
+import 'package:star_builder/database.dart';
 import 'package:star_builder/home.dart';
 
 Future main() async {
-  await SourceDb.loadDatabase();
-  await ThemeDb.loadDatabase();
-  await RaceDb.loadDatabase();
-  await ClassDb.loadDatabase();
+  await MainDb.loadDatabaseWithRootBundle();
   StarfinderCharacter.characters = [
-    StarfinderCharacter("Nugget", "Ysoki", "", "Mechanic", "Xenoarchaeologist"),
-    StarfinderCharacter("Koggar", "Nuar", "", "Soldier", "Ace Pilot"),
-    StarfinderCharacter("Vylit", "Shirren", "", "Mystic", "Ace Pilot"),
-    StarfinderCharacter(
+    StarfinderCharacter.fromBasicInfo(
+        "Nugget", "Ysoki", "", "Mechanic", "Xenoarchaeologist"),
+    StarfinderCharacter.fromBasicInfo(
+        "Koggar", "Nuar", "", "Soldier", "Ace Pilot"),
+    StarfinderCharacter.fromBasicInfo(
+        "Vylit", "Shirren", "", "Mystic", "Ace Pilot"),
+    StarfinderCharacter.fromBasicInfo(
         "Duality", "Lashunta", "Damaya", "Technomancer", "Cyberborn"),
   ];
   runApp(StarBuilderApp());
