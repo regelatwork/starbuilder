@@ -81,5 +81,6 @@ class StarfinderCharacter {
     character.theme = ThemeDb.getTheme(basicInfo["Theme"]);
     character.baseClass = ClassDb.getClass(basicInfo["BaseClass"]);
     character.race = RaceDb.getRaceFromJson(basicInfo["Race"]);
+    return character;
   }
 }

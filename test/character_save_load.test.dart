@@ -18,6 +18,12 @@ final bobString = """
 }
 """;
 
+StarfinderCharacter getBob(){
+  StarfinderCharacter character = StarfinderCharacter.fromBasicInfo(
+      "Bob", "Human", "", "Mystic", "Colonist");
+  return character;
+}
+
 final dualityString = """
 {
   "Basic Info": {
@@ -29,6 +35,12 @@ final dualityString = """
 }
 """;
 
+StarfinderCharacter getDuality(){
+  StarfinderCharacter character = StarfinderCharacter.fromBasicInfo(
+      "\"Duality\"", "Lashunta", "Damaya", "Technomancer", "Cyberborn");
+  return character;
+}
+
 void main() {
   setUp(() async {
     AssetBundle assetBundle =
@@ -38,17 +50,17 @@ void main() {
 
   group("Character", () {
     test('Save Test - Bob', () async {
-      StarfinderCharacter character = StarfinderCharacter.fromBasicInfo(
-          "Bob", "Human", "", "Mystic", "Colonist");
-      String characterSave = character.save();
-      expect(characterSave, jsonEncode(jsonDecode(bobString)));
+      expect(getBob().save(), jsonEncode(jsonDecode(bobString)));
+    });
+    test('Load Test - Bob', () async {
+      expect(getBob().save(), StarfinderCharacter.load(bobString).save());
     });
 
     test('Save Test - "Duality"', () async {
-      StarfinderCharacter character = StarfinderCharacter.fromBasicInfo(
-          "\"Duality\"", "Lashunta", "Damaya", "Technomancer", "Cyberborn");
-      String characterSave = character.save();
-      expect(characterSave, jsonEncode(jsonDecode(dualityString)));
+      expect(getDuality().save(), jsonEncode(jsonDecode(dualityString)));
+    });
+    test('Load Test - "Duality"', () async {
+      expect(getDuality().save(), StarfinderCharacter.load(dualityString).save());
     });
   });
 }
