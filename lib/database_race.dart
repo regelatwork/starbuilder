@@ -19,8 +19,9 @@ class RaceDb {
     // Populate the race list
     for (List<dynamic> row in rows) {
       String name = row[0];
+      String division = row[1];
       String subname = row[2];
-      SfRace race = SfRace(name, subname);
+      SfRace race = SfRace(name, division, subname);
       races.add(race);
       racesByName.putIfAbsent(name, () => <SfRace>[]);
       racesByName[name].add(race);
@@ -48,7 +49,8 @@ class RaceDb {
 
 class SfRace {
   final String name;
+  final String division;
   final String subname;
 
-  SfRace(this.name, this.subname);
+  SfRace(this.name, this.division, this.subname);
 }
