@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart';
-import 'package:printing/printing.dart';
+// import 'package:printing/printing.dart';
 import 'package:star_builder/character.dart';
 import 'package:star_builder/character_editor_ability_score.dart';
 import 'package:star_builder/database_ability.dart';
@@ -23,13 +23,13 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
   void _print() {
     PDFDocument pdf =
         PdfGenerator.generateForCharacter(StarfinderCharacter.activeCharacter);
-    Printing.printPdf(document: pdf);
+    // Printing.printPdf(document: pdf);
   }
 
   void _share() {
     PDFDocument pdf =
         PdfGenerator.generateForCharacter(StarfinderCharacter.activeCharacter);
-    Printing.sharePdf(document: pdf);
+    // Printing.sharePdf(document: pdf);
   }
 
   @override

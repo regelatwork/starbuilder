@@ -20,7 +20,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   path_provider: ^0.4.1
   pdf: ^1.0.8
-  printing: ^1.0.6
+  # printing: ^1.0.6
   shared_preferences: ^0.4.3
   tuple: ^1.0.2
 
