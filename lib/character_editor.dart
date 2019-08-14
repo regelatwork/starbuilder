@@ -12,11 +12,14 @@ class CharacterEditor extends StatefulWidget {
 
 class _CharacterEditorState extends State<CharacterEditor>
     with SingleTickerProviderStateMixin {
-  final List<String> tabTitles = <String>["One", "Two"];
+  final List<String> tabTitles = <String>["One", "Two"];//, "Three", "Four", "Five"];
 
   final List<Tab> myTabs = <Tab>[
-    Tab(text: 'LEFT'),
-    Tab(text: 'RIGHT'),
+    Tab(text: '1'),
+    Tab(text: '2'),
+//    Tab(text: '3'),
+//    Tab(text: '4'),
+//    Tab(text: '5'),
   ];
 
   TabController _tabController;
@@ -59,7 +62,7 @@ class CharacterEditorTab {
 List<CharacterEditorTab> tabs = <CharacterEditorTab>[
   CharacterEditorTab(title: "Basics", widget: CharacterEditorBasics()),
   CharacterEditorTab(title: "Classes", widget: Text("Classic!")),
-  CharacterEditorTab(title: "Feats", widget: null),
-  CharacterEditorTab(title: "Spells", widget: null),
-  CharacterEditorTab(title: "Equipment", widget: null),
+//  CharacterEditorTab(title: "Feats", widget: null),
+//  CharacterEditorTab(title: "Spells", widget: null),
+//  CharacterEditorTab(title: "Equipment", widget: null),
 ];
