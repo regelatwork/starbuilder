@@ -1,11 +1,8 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart';
+import 'package:flutter_test/flutter_test.dart';
 import 'package:star_builder/character.dart';
 import 'package:star_builder/database.dart';
-import "package:test/test.dart";
-
-import 'DiskAssetBundle.dart';
 
 final bobString = """
 {
@@ -61,23 +58,21 @@ StarfinderCharacter getDuality(){
 
 void main() {
   setUp(() async {
-    AssetBundle assetBundle =
-    await DiskAssetBundle.loadAssets(MainDb.getAssetNames());
-    await MainDb.loadDatabaseWithAssetBundle(assetBundle);
+    await MainDb.loadDatabaseWithRootBundle();
   });
 
   group("Character", () {
-    test('Save Test - Bob', () async {
+    testWidgets('Save Test - Bob', (WidgetTester tester) async {
       expect(getBob().save(), jsonEncode(jsonDecode(bobString)));
     });
-    test('Load Test - Bob', () async {
+    testWidgets('Load Test - Bob', (WidgetTester tester) async {
       expect(getBob().save(), StarfinderCharacter.load(bobString).save());
     });
 
-    test('Save Test - "Duality"', () async {
+    testWidgets('Save Test - "Duality"', (WidgetTester tester) async {
       expect(getDuality().save(), jsonEncode(jsonDecode(dualityString)));
     });
-    test('Load Test - "Duality"', () async {
+    testWidgets('Load Test - "Duality"', (WidgetTester tester) async {
       expect(getDuality().save(), StarfinderCharacter.load(dualityString).save());
     });
   });
