@@ -21,13 +21,13 @@ class _CharacterEditorBasicsState extends State<CharacterEditorBasics> {
   SfClass baseClass = StarfinderCharacter.activeCharacter.baseClass;
 
   void _print() {
-    PDFDocument pdf =
+    PdfDocument pdf =
         PdfGenerator.generateForCharacter(StarfinderCharacter.activeCharacter);
     // Printing.printPdf(document: pdf);
   }
 
   void _share() {
-    PDFDocument pdf =
+    PdfDocument pdf =
         PdfGenerator.generateForCharacter(StarfinderCharacter.activeCharacter);
     // Printing.sharePdf(document: pdf);
   }

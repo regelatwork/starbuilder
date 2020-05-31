@@ -8,6 +8,7 @@ import 'package:star_builder/database_ability.dart';
 import 'package:star_builder/home.dart';
 
 Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await MainDb.loadDatabaseWithRootBundle();
   StarfinderCharacter.characters = [
     StarfinderCharacter.fromBasicInfo(
